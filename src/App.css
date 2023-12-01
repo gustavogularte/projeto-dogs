@@ -18,6 +18,7 @@ html {
 body {
   font-family: var(--fonte-1);
   font-size: 1.8rem;
+  padding-top: 6rem;
 }
 
 img {
@@ -28,4 +29,11 @@ img {
 
 a {
   color: inherit;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

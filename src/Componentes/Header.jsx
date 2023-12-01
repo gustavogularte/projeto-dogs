@@ -5,8 +5,8 @@ import Dogs from '../Assets/dogs.svg?react'
 
 const Header = () => {
   return (
-    <header>
-      <nav>
+    <header className={styles.header}>
+      <nav className={styles.nav + ' container'}>
         <ul>
           <li><Link to='/'><Dogs/></Link></li>
           <li><Link to='login'>Login / Criar</Link></li>
