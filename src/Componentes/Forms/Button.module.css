@@ -1,0 +1,14 @@
+.button {
+  background-color: var(--cor-p-1);
+  border: 0.2rem solid var(--cor-p-1);
+  padding: 1.2rem 2.6rem;
+  border-radius: 0.4rem;
+  color: #764701;
+  font-size: 1.8rem;
+}
+
+.button:hover,
+.button:focus {
+  border-color: var(--cor-p-2);
+  box-shadow: 0 0 0 0.1rem var(--cor-p-1);
+}
