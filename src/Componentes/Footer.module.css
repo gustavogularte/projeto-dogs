@@ -1,0 +1,20 @@
+.footer {
+  display: grid;
+  justify-items: center;
+  background-color: var(--cor-p-1);
+  color: #764701;
+  padding: 6rem;
+}
+
+.footer p {
+  padding-top: 2rem;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #fff;
+  transition: 0.3s;
+}
