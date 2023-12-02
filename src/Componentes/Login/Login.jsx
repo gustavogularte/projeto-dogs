@@ -8,15 +8,13 @@ import styles from './Login.module.css';
 
 const Login = () => {
   return (
-    <main>
-      <section className={StyleSheet.loginContainer}>
-        <Routes>
-          <Route path="/" element={<LoginEntrar />} />
-          <Route path="criar" element={<LoginCriar />} />
-          <Route path="resetar" element={<LoginResetar />} />
-          <Route path="perdeu" element={<LoginPerdeu />} />
-        </Routes>
-      </section>
+    <main className={styles.loginContainer}>
+      <Routes>
+        <Route path="/" element={<LoginEntrar />} />
+        <Route path="criar" element={<LoginCriar />} />
+        <Route path="resetar" element={<LoginResetar />} />
+        <Route path="perdeu" element={<LoginPerdeu />} />
+      </Routes>
     </main>
   );
 };

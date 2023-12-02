@@ -1,4 +1,28 @@
 .loginContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.loginContainer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: url('../../Assets/login.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.loginContainer form {
+  max-width: 40rem;
+}
+
+.loginContainer form button {
+  margin-top: 2rem;
+}
+
+.loginContainer a {
+  display: block;
+  padding-top: 2rem;
 }

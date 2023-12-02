@@ -9,7 +9,7 @@ const Header = () => {
       <nav className={styles.nav + ' container'}>
         <ul>
           <li><Link to='/'><Dogs/></Link></li>
-          <li><Link to='login'>Login / Criar</Link></li>
+          <li><Link to='login' className={styles.login}>Login / Criar</Link></li>
         </ul>
       </nav>
     </header>

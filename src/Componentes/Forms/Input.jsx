@@ -6,7 +6,6 @@ const Input = ({label, type, value, setValue, ...props}) => {
     <label className={styles.label}>
       {label}
       <input className={styles.input} type={type} value={value} onChange={setValue} {...props}/>
-      <p className={styles.erro}>Erro</p>
     </label>
   )
 }

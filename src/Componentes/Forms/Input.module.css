@@ -7,7 +7,7 @@
 .input {
   display: block;
   font-size: 1.8rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.8rem;
   background-color: #eee;
   border: 0.2rem solid #eee;
   outline: none;
@@ -15,6 +15,7 @@
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
   color: #333;
+  width: 100%;
 }
 
 .input:hover,

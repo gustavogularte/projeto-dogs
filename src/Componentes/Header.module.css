@@ -19,3 +19,12 @@
   display: block;
   padding: 1rem;
 }
+
+.login::after {
+  content: '';
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.7rem;
+  margin-left: 0.4rem;
+  background-image: url('../Assets/usuario.svg');
+}
