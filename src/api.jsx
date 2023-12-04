@@ -17,7 +17,7 @@ export function LOGAR(token) {
   return {
     url: API_URL + '/api/user',
     options: {
-      method: 'POST',
+      method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`,
       },

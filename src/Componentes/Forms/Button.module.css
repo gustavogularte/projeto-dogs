@@ -5,6 +5,7 @@
   border-radius: 0.4rem;
   color: #764701;
   font-size: 1.8rem;
+  cursor: pointer;
 }
 
 .button:hover,

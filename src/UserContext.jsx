@@ -10,15 +10,15 @@ export const UserStorage = ({ children }) => {
     const { url, options } = LOGAR(token);
     const response = await fetch(url, options);
     const json = await response.json();
-    console.log(json)
   }
 
   async function fazerLogin(username, password) {
-    const { url, options } = PEGAR_TOKEN({username, password});
+    console.log({ username, password });
+    const { url, options } = PEGAR_TOKEN({ username, password });
     const response = await fetch(url, options);
     const json = await response.json();
     window.localStorage.setItem('token', json.token);
-    puxarUser(json.token)
+    puxarUser(json.token);
   }
 
   return (
