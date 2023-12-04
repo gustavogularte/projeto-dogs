@@ -13,3 +13,8 @@
   border-color: var(--cor-p-2);
   box-shadow: 0 0 0 0.1rem var(--cor-p-1);
 }
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}

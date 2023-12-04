@@ -24,3 +24,15 @@ export function LOGAR(token) {
     },
   };
 }
+
+export function VALIDAR_TOKEN(token) {
+  return {
+    url: API_URL + '/jwt-auth/v1/token/validate',
+    options: {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  };
+}

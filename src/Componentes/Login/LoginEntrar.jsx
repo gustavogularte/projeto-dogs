@@ -11,12 +11,12 @@ const LoginEntrar = () => {
   const username = useForm();
   const password = useForm();
 
-  const {fazerLogin} = React.useContext(UserContext)
+  const { fazerLogin, erro, loading } = React.useContext(UserContext);
 
   async function handleSubmit(e) {
     e.preventDefault();
     if (username.validate() && password.validate()) {
-      fazerLogin(username.value, password.value)
+      fazerLogin(username.value, password.value);
     }
   }
 
@@ -26,9 +26,16 @@ const LoginEntrar = () => {
         <Titulo>Login</Titulo>
         <Input type="text" label="Usuário" {...username} />
         <Input type="password" label="Senha" {...password} />
-        <Button>Entrar</Button>
+        {loading ? (
+          <Button disabled>Carregando</Button>
+        ) : (
+          <Button>Entrar</Button>
+        )}
+        {erro && <p>{erro}</p>}
       </form>
-      <Link to="perdeu" className={styles.perdeuLink}>Perdeu a senha?</Link>
+      <Link to="perdeu" className={styles.perdeuLink}>
+        Perdeu a senha?
+      </Link>
     </section>
   );
 };
