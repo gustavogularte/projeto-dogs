@@ -5,6 +5,7 @@ import Button from '../Forms/Button';
 import { Link } from 'react-router-dom';
 import useForm from '../../Hooks/useForm';
 import { UserContext } from '../../UserContext';
+import styles from './Login.module.css';
 
 const LoginEntrar = () => {
   const username = useForm();
@@ -27,7 +28,7 @@ const LoginEntrar = () => {
         <Input type="password" label="Senha" {...password} />
         <Button>Entrar</Button>
       </form>
-      <Link to="perdeu">Perdeu a senha?</Link>
+      <Link to="perdeu" className={styles.perdeuLink}>Perdeu a senha?</Link>
     </section>
   );
 };
