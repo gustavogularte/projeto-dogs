@@ -12,35 +12,17 @@ export const UserStorage = ({ children }) => {
 
   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    async function autoLogin() {
-      const token = window.localStorage.getItem('token');
-      if (token) {
-        try {
-          setErro(null);
-          setLoading(true);
-          const { url, options } = VALIDAR_TOKEN(token);
-          const response = await fetch(url, options);
-          if (!response.ok) throw new Error('token inválido crl');
-          await puxarUser(token);
-        } catch (err) {
-          logoutUser();
-        } finally {
-          setLoading(false);
-        }
-      }
-    }
-    autoLogin();
-  }, []);
-
-  async function puxarUser(token) {
-    const { url, options } = LOGAR(token);
-    const response = await fetch(url, options);
-    const json = await response.json();
-    setData(json);
-    setLogin(true);
-    navigate('/conta');
-  }
+  const puxarUser = React.useCallback(
+    async (token) => {
+      const { url, options } = LOGAR(token);
+      const response = await fetch(url, options);
+      const json = await response.json();
+      setData(json);
+      setLogin(true);
+      navigate('/conta');
+    },
+    []
+  );
 
   async function fazerLogin(username, password) {
     try {
@@ -54,19 +36,43 @@ export const UserStorage = ({ children }) => {
       await puxarUser(token);
     } catch (err) {
       setErro(err.message);
+      setLogin(false);
     } finally {
       setLoading(false);
     }
   }
 
-  async function logoutUser() {
+  const logoutUser = React.useCallback(async () => {
     setData(null);
     setLoading(false);
     setErro(null);
     setLogin(false);
     window.localStorage.removeItem('token');
-    navigate('login')
-  }
+    navigate('login');
+  }, []);
+
+  React.useEffect(() => {
+    async function autoLogin() {
+      const token = window.localStorage.getItem('token');
+      if (token) {
+        try {
+          setErro(null);
+          setLoading(true);
+          const { url, options } = VALIDAR_TOKEN(token);
+          const response = await fetch(url, options);
+          if (!response.ok) throw new Error('token inválido');
+          await puxarUser(token);
+        } catch (err) {
+          logoutUser();
+        } finally {
+          setLoading(false);
+        }
+      } else {
+        setLogin(false);
+      }
+    }
+    autoLogin();
+  }, [logoutUser]);
 
   return (
     <UserContext.Provider

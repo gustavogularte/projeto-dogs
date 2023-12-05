@@ -3,7 +3,6 @@ import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 import Dogs from '../Assets/dogs.svg?react';
 import { UserContext } from '../UserContext';
-import Button from './Forms/Button';
 
 const Header = () => {
   const { data, logoutUser } = React.useContext(UserContext);
@@ -19,12 +18,9 @@ const Header = () => {
           </li>
           <li>
             {data ? (
-              <>
-                <Link to="conta" className={styles.login}>
-                  {data.nome}
-                </Link>
-                <Button onClick={logoutUser}>Sair</Button>
-              </>
+              <Link to="conta" className={styles.login}>
+                {data.nome}
+              </Link>
             ) : (
               <Link to="login" className={styles.login}>
                 Login / Criar
