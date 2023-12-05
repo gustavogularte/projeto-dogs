@@ -1,5 +1,4 @@
 import React from 'react';
-import Titulo from '../Titulo';
 import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import { Link } from 'react-router-dom';
@@ -21,9 +20,9 @@ const LoginEntrar = () => {
   }
 
   return (
-    <section>
+    <section className='animeLeft'>
       <form onSubmit={handleSubmit}>
-        <Titulo>Login</Titulo>
+        <h1 className="titulo">Login</h1>
         <Input type="text" label="Usuário" {...username} />
         <Input type="password" label="Senha" {...password} />
         {loading ? (
@@ -31,10 +30,15 @@ const LoginEntrar = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        {erro && <p>{erro}</p>}
+        {erro && <p className={styles.erro}>{erro}</p>}
       </form>
       <Link to="perdeu" className={styles.perdeuLink}>
         Perdeu a senha?
+      </Link>
+      <h2 className={styles.cadastrar + ' subtitulo'}>Cadastre-se</h2>
+      <p>Ainda não possui conta? Cadastre-se no site.</p>
+      <Link to="criar">
+        <Button>Cadastro</Button>
       </Link>
     </section>
   );
