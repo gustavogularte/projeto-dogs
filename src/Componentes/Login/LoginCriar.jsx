@@ -12,8 +12,8 @@ const LoginCriar = () => {
   const email = useForm('email');
   const password = useForm();
 
-  const {fazerLogin} = React.useContext(UserContext)
-  const {request, loading, erro} = useFetch();
+  const { fazerLogin } = React.useContext(UserContext);
+  const { request, loading, erro } = useFetch();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,8 +22,8 @@ const LoginCriar = () => {
       email: email.value,
       password: password.value,
     });
-    const {response} = await request(url, options);
-    if (response.ok) fazerLogin(username.value, password.value)
+    const { response } = await request(url, options);
+    if (response.ok) fazerLogin(username.value, password.value);
   }
 
   return (
@@ -33,8 +33,12 @@ const LoginCriar = () => {
         <Input label="Usuário" type="text" {...username} />
         <Input label="Email" type="email" {...email} />
         <Input label="Senha" type="password" {...password} />
-        <Button>Cadastrar</Button>
-        <Erro erro={erro}/>
+        {loading ? (
+          <Button disabled>Cadastrando...</Button>
+        ) : (
+          <Button>Cadastrar</Button>
+        )}
+        <Erro erro={erro} />
       </form>
     </section>
   );
