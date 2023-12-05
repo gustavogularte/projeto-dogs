@@ -69,13 +69,18 @@ a {
   line-height: 1;
 }
 
-.subtitulo::after{
+.subtitulo::after {
   content: '';
   display: block;
   width: 6rem;
   height: 0.8rem;
   background-color: #ddd;
   border-radius: 0.4rem;
+}
+
+.erro {
+  color: #f31;
+  padding: 0.8rem 0;
 }
 
 .animeLeft {

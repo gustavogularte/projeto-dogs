@@ -38,10 +38,6 @@
   padding-bottom: 2.8rem;
 }
 
-.erro {
-  color: #f31;
-}
-
 @media (max-width: 800px) {
   .loginContainer {
     grid-template-columns: 1fr;

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import useForm from '../../Hooks/useForm';
 import { UserContext } from '../../UserContext';
 import styles from './Login.module.css';
+import Erro from '../Forms/Erro';
 
 const LoginEntrar = () => {
   const username = useForm();
@@ -30,7 +31,7 @@ const LoginEntrar = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        {erro && <p className={styles.erro}>{erro}</p>}
+        <Erro erro={erro}/>
       </form>
       <Link to="perdeu" className={styles.perdeuLink}>
         Perdeu a senha?
