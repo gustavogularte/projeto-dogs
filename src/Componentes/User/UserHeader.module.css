@@ -10,7 +10,8 @@
   gap: 1.2rem;
 }
 
-.nav a, button {
+.nav a,
+.nav button {
   background-color: #eee;
   border: 0.1rem solid #eee;
   display: grid;
@@ -36,5 +37,92 @@
 }
 
 .nav a:global(.active) svg > * {
+  fill: var(--cor-p-1);
+}
+
+.mobileMenu {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: #eee;
+  border: 0.1rem solid #eee;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobileMenu::after {
+  content: '';
+  width: 2rem;
+  display: block;
+  border: 0.1rem solid currentColor;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.6rem currentColor, 0 -0.6rem currentColor;
+  background-color: currentColor;
+  transition: 0.2s;
+}
+
+.mobileMenu:hover,
+.mobileMenu:focus {
+  border-color: var(--cor-p-1);
+  background-color: #fff;
+  box-shadow: 0 0 0 0.2rem var(--cor-p-2);
+  color: var(--cor-p-1);
+}
+
+.ativo::after {
+  transform: rotate(90deg);
+  width: 0.2rem;
+  height: 0.2rem;
+  box-shadow: 0 0.8rem currentColor, 0 -0.8rem currentColor;
+}
+
+.navMobile {
+  position: absolute;
+  top: 16.5rem;
+  right: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+  padding: 0.8rem 1.4rem;
+  opacity: 0;
+  transform: translateX(-2rem);
+  pointer-events: none;
+}
+
+.navMobile.navAtivo {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.3s;
+  pointer-events: initial;
+}
+
+.navMobile a {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 0.8rem;
+  width: 100%;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 0.2rem solid #eee;
+}
+
+.navMobile button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.navMobile a:hover svg > *,
+.navMobile a:focus svg > *,
+.navMobile button:hover svg > *,
+.navMobile button:focus svg > * {
   fill: var(--cor-p-1);
 }

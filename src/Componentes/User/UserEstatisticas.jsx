@@ -2,9 +2,9 @@ import React from 'react'
 
 const UserEstatisticas = () => {
   return (
-    <div>
+    <section>
       STYATS
-    </div>
+    </section>
   )
 }
 

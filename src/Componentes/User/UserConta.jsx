@@ -2,9 +2,9 @@ import React from 'react'
 
 const UserConta = () => {
   return (
-    <div>
+    <section>
       Minha conta
-    </div>
+    </section>
   )
 }
 
