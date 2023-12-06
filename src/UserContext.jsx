@@ -12,17 +12,13 @@ export const UserStorage = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const puxarUser = React.useCallback(
-    async (token) => {
-      const { url, options } = LOGAR(token);
-      const response = await fetch(url, options);
-      const json = await response.json();
-      setData(json);
-      setLogin(true);
-      navigate('/conta');
-    },
-    []
-  );
+  const puxarUser = React.useCallback(async (token) => {
+    const { url, options } = LOGAR(token);
+    const response = await fetch(url, options);
+    const json = await response.json();
+    setData(json);
+    setLogin(true);
+  }, []);
 
   async function fazerLogin(username, password) {
     try {
@@ -48,7 +44,6 @@ export const UserStorage = ({ children }) => {
     setErro(null);
     setLogin(false);
     window.localStorage.removeItem('token');
-    navigate('login');
   }, []);
 
   React.useEffect(() => {
@@ -72,7 +67,7 @@ export const UserStorage = ({ children }) => {
       }
     }
     autoLogin();
-  }, [logoutUser]);
+  }, [logoutUser, puxarUser]);
 
   return (
     <UserContext.Provider
