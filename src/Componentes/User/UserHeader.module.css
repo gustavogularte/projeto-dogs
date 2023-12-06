@@ -9,3 +9,32 @@
   display: flex;
   gap: 1.2rem;
 }
+
+.nav a, button {
+  background-color: #eee;
+  border: 0.1rem solid #eee;
+  display: grid;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav button:hover,
+.nav button:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 0.3rem #eee;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.nav a:global(.active) {
+  border-color: var(--cor-p-1);
+  background-color: #fff;
+  box-shadow: 0 0 0 0.2rem var(--cor-p-2);
+}
+
+.nav a:global(.active) svg > * {
+  fill: var(--cor-p-1);
+}

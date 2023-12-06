@@ -33,7 +33,7 @@ const UserHeader = () => {
       <h1 className="titulo">{titulo}</h1>
       <nav className={styles.nav}>
         <li>
-          <NavLink to="/conta">
+          <NavLink to="/conta" end>
             <Conta />
           </NavLink>
         </li>
