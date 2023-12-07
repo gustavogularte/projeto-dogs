@@ -2,6 +2,7 @@ import React from 'react'
 import Input from '../Forms/Input'
 import useForm from '../../Hooks/useForm';
 import Button from '../Forms/Button';
+import styles from './User.module.css'
 
 const UserPostar = () => {
   const nome = useForm();
@@ -13,7 +14,7 @@ const UserPostar = () => {
       <Input label='Nome' type='text' />
       <Input label='Peso' type='text' />
       <Input label='Idade' type='text' />
-      <input type='file' />
+      <Input type='file'/>
       <Button>Enviar</Button>
     </form>
   )

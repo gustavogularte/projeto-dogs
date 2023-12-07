@@ -2,3 +2,7 @@
 .user form {
   height: 100vh;
 }
+
+.user form {
+  max-width: 40rem;
+}

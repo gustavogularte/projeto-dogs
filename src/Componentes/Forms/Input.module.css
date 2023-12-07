@@ -18,6 +18,18 @@
   width: 100%;
 }
 
+.input[type="file"] {
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  font-size: 1.6rem;
+}
+
+.input[type="file"]:hover {
+  border-color: initial;
+  box-shadow: initial;
+}
+
 .input:hover,
 .input:focus {
   border-color: var(--cor-p-1);
