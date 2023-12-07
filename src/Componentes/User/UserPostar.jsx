@@ -58,6 +58,7 @@ const UserPostar = () => {
         ) : (
           <Button>Enviar</Button>
         )}
+        <Erro erro={erro}/>
       </form>
       <div>
         <section
