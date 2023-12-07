@@ -12,7 +12,7 @@ const Login = () => {
   if (login) return <Navigate to="/conta" />;
 
   return (
-    <main className={styles.loginContainer + ' animeLeft'}>
+    <main className={styles.loginContainer + 'grid animeLeft'}>
       <Routes>
         <Route path="/" element={<LoginEntrar />} />
         <Route path="criar" element={<LoginCriar />} />

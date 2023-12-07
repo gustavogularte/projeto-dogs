@@ -4,11 +4,11 @@ import { Route, Routes } from 'react-router-dom';
 import UserEstatisticas from './UserEstatisticas';
 import UserPostar from './UserPostar';
 import UserConta from './UserConta';
-import styles from './User.module.css'
+import styles from './User.module.css';
 
 const User = () => {
   return (
-    <main className={styles.user + ' container'}>
+    <main className="grid container">
       <UserHeader />
       <Routes>
         <Route path="/" element={<UserConta />} />

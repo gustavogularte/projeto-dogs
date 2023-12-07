@@ -3,7 +3,7 @@
   justify-items: center;
   background-color: var(--cor-p-1);
   color: #764701;
-  padding: 6rem;
+  padding: 4rem 0rem;
 }
 
 .footer p {
@@ -19,10 +19,4 @@
 .footer a:hover {
   color: #fff;
   transition: 0.3s;
-}
-
-@media (max-width: 800px) {
-  .footer {
-    padding: 4rem;
-  }
 }

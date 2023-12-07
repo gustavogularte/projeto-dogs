@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  height: 100vh;
 }
 
 .imgPreview {
@@ -19,4 +18,14 @@
 
 .img {
   margin-top: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .postar {
+    grid-template-columns: 1fr;
+  }
+
+  .imgPreview {
+    margin-bottom: 6rem;
+  }
 }

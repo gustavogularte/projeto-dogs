@@ -27,6 +27,13 @@ body {
   padding-top: 6rem;
 }
 
+.grid {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh);
+  flex: 1;
+}
+
 img {
   border-radius: 0.4rem;
   max-width: 100%;
