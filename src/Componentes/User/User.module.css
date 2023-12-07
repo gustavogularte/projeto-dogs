@@ -1,8 +1,7 @@
-.user section,
-.user form {
+.conta {
   height: 100vh;
 }
 
-.user form {
-  max-width: 40rem;
+.estatisticas {
+  height: 100vh;
 }

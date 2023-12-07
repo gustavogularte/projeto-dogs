@@ -1,6 +1,5 @@
 import React from 'react';
 import { LOGAR, PEGAR_TOKEN, VALIDAR_TOKEN } from './api';
-import { useNavigate } from 'react-router-dom';
 
 export const UserContext = React.createContext();
 
@@ -9,8 +8,6 @@ export const UserStorage = ({ children }) => {
   const [loading, setLoading] = React.useState(false);
   const [erro, setErro] = React.useState(null);
   const [login, setLogin] = React.useState(null);
-
-  const navigate = useNavigate();
 
   const puxarUser = React.useCallback(async (token) => {
     const { url, options } = LOGAR(token);

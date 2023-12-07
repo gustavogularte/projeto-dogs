@@ -1,0 +1,22 @@
+.postar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  height: 100vh;
+}
+
+.imgPreview {
+  border-radius: 1.6rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.imgPreview::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.img {
+  margin-top: 0.8rem;
+}

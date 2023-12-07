@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Input.module.css';
 
-const Input = ({ label, type, value, onChange, erro, onBlur }) => {
+const Input = ({ label, type, value, onChange, erro, onBlur}) => {
   return (
     <label className={styles.label}>
       {label}

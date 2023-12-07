@@ -41,7 +41,6 @@ const UserHeader = () => {
   function ativarMenu({target}) {
     setAtivo(!ativo)
     target.setAttribute('aria-expanded', !ativo)
-    console.log(ativo)
   }
 
   return (

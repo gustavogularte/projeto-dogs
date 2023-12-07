@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './User.module.css'
 
 const UserEstatisticas = () => {
   return (
-    <section>
+    <section className={styles.estatisticas + ' animeLeft'}>
       STYATS
     </section>
   )
