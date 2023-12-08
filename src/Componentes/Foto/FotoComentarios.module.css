@@ -1,7 +1,7 @@
 .comentariosLista {
   font-size: 1.6rem;
   overflow-y: auto;
-  max-height: 20rem;
+  max-height: 36rem;
 }
 
 .comentariosLista li {
@@ -10,4 +10,10 @@
 
 .comentario span {
   font-weight: bold;
+}
+
+@media (max-width: 950px) {
+  .comentariosLista {
+    max-height: 20rem;
+  }
 }
