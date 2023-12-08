@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import FotoComentarios from './FotoComentarios';
 
 const FotoConteudo = ({ data }) => {
-  console.log(data);
   const { comments, photo } = data;
 
   return (
@@ -18,12 +17,16 @@ const FotoConteudo = ({ data }) => {
             <Link to={`perfil/${photo.author}`}>@{photo.author}</Link>
             <p>{photo.acessos}</p>
           </span>
-          <h1 className={`${styles.modalTitulo} titulo`}><Link to={`foto/${photo.id}`}>{photo.title}</Link></h1>
+          <h1 className={`${styles.modalTitulo} titulo`}>
+            <Link to={`foto/${photo.id}`}>{photo.title}</Link>
+          </h1>
           <ul className={styles.modalCaracteristicas}>
             <li>{photo.peso} kg</li>
             <li>{photo.idade} anos</li>
           </ul>
-          <FotoComentarios id={photo.id} comentarios={comments}/>
+          <section className={styles.teste}>
+            <FotoComentarios id={photo.id} comentarios={comments} />
+          </section>
         </section>
       </section>
     </article>

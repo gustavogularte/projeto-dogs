@@ -1,0 +1,13 @@
+.comentariosLista {
+  padding-top: 4rem;
+  font-size: 1.6rem;
+  overflow-y: auto;
+}
+
+.comentariosLista li {
+  padding-bottom: 0.8rem;
+}
+
+.comentario span {
+  font-weight: bold;
+}
