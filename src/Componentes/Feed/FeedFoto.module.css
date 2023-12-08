@@ -34,3 +34,10 @@
 .foto:hover span {
   display: flex;
 }
+
+@media (max-width: 600px) {
+  .foto:nth-child(2) {
+    grid-column: initial;
+    grid-row: initial;
+  }
+}

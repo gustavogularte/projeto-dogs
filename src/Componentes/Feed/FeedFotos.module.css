@@ -5,3 +5,15 @@
   padding-bottom: 12rem;
   justify-items: center;
 }
+
+@media (max-width: 600px) {
+  .feed {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .feed {
+    grid-template-columns: 1fr;
+  }
+}
