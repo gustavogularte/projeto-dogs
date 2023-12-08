@@ -1,7 +1,7 @@
 .comentariosLista {
-  padding-top: 4rem;
   font-size: 1.6rem;
   overflow-y: auto;
+  max-height: 20rem;
 }
 
 .comentariosLista li {

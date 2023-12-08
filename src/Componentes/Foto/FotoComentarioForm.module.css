@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 0.8rem;
+  padding-top: 1.2rem;
 }
 
 .comentarioForm input{

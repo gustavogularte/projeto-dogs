@@ -24,10 +24,8 @@ const FotoConteudo = ({ data }) => {
             <li>{photo.peso} kg</li>
             <li>{photo.idade} anos</li>
           </ul>
-          <section className={styles.teste}>
-            <FotoComentarios id={photo.id} comentarios={comments} />
-          </section>
         </section>
+        <FotoComentarios id={photo.id} comentarios={comments} />
       </section>
     </article>
   );

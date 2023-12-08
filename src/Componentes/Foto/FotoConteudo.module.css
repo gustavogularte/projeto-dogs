@@ -4,6 +4,8 @@
   max-width: 90rem;
   background-color: #fff;
   border-radius: 0.4rem;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .modal img {
@@ -12,13 +14,14 @@
 
 .modalConteudo {
   padding: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .modalDetalhes {
   display: flex;
   justify-content: space-between;
   color: #aaa;
-  margin-bottom: 1.2rem;
 }
 
 .modalDetalhes p::before {
@@ -33,11 +36,18 @@
 .modalCaracteristicas {
   display: flex;
   gap: 2rem;
-  padding-top: 1.2rem;
+  padding: 1.2rem 0;
 }
 
 .modalCaracteristicas li {
   border-left: 0.2rem solid #333;
   font-weight: bold;
   padding-left: 0.8rem;
+}
+
+@media (max-width: 950px) {
+  .modal {
+    grid-template-columns: 1fr;
+    max-width: 60rem;
+  }
 }
