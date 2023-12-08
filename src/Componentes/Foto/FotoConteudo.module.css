@@ -1,0 +1,45 @@
+.modal {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 90rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+
+.modal img {
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.modalConteudo {
+  padding: 2rem;
+}
+
+.modalDetalhes {
+  display: flex;
+  justify-content: space-between;
+  color: #aaa;
+  margin-bottom: 1.2rem;
+}
+
+.modalDetalhes p::before {
+  content: '';
+  display: inline-block;
+  background-image: url('../../Assets/visualizacao-black.svg');
+  width: 1.6rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+}
+
+
+
+.modalCaracteristicas {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1.2rem;
+}
+
+.modalCaracteristicas li {
+  border-left: 0.2rem solid #333;
+  font-weight: bold;
+  padding-left: 0.8rem;
+}

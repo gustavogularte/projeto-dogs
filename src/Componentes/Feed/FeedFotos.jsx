@@ -1,24 +1,25 @@
 import React from 'react';
 import useFetch from '../../Hooks/useFetch';
-import { PEGAR_FOTO } from '../../api';
+import { PEGAR_FOTOS } from '../../api';
 import FeedFoto from './FeedFoto';
 import styles from './FeedFotos.module.css';
+import Loading from '../Helper/Loading';
 
-const FeedFotos = () => {
+const FeedFotos = ({setModalFoto}) => {
   const { data, loading, erro, request } = useFetch();
 
   React.useEffect(() => {
-    const { url, options } = PEGAR_FOTO({ page: 1, total: 6, user: 0 });
+    const { url, options } = PEGAR_FOTOS({ page: 1, total: 6, user: 0 });
     request(url, options);
   }, [request]);
 
   if (erro) return <section>{erro}</section>;
-  if (loading) return <section>Loading...</section>;
+  if (loading) return <Loading />;
   if (data)
     return (
       <ul className={styles.feed}>
         {data.map((foto) => (
-          <FeedFoto key={foto.id} {...foto} />
+          <FeedFoto key={foto.id} setModalFoto={setModalFoto} foto={foto} />
         ))}
       </ul>
     );

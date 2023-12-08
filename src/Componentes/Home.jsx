@@ -4,8 +4,7 @@ import Feed from './Feed/Feed';
 
 const Home = () => {
   return (
-    <main className="animeLeft">
-      Home
+    <main className={styles.home}>
       <Feed />
     </main>
   );

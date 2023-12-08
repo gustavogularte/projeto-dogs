@@ -1,13 +1,16 @@
 import React from 'react';
-import styles from './FeedFoto.module.css'
+import styles from './FeedFoto.module.css';
 
-const FeedFoto = ({src, title, acessos}) => {
+const FeedFoto = ({ setModalFoto, foto }) => {
+  function abrirModal() {
+    setModalFoto(foto);
+  }
   return (
-    <li className={styles.foto}>
-      <img src={src} alt={title}/>
-      <span>{acessos}</span>
+    <li className={styles.foto} onClick={abrirModal}>
+      <img src={foto.src} alt={foto.title} />
+      <span>{foto.acessos}</span>
     </li>
-  )
-}
+  );
+};
 
-export default FeedFoto
+export default FeedFoto;
