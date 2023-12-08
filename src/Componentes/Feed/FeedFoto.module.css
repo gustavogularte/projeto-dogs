@@ -1,0 +1,36 @@
+.foto {
+  display: grid;
+  cursor: pointer;
+}
+
+.foto:nth-child(2) {
+  grid-column: 2/4;
+  grid-row: span 2;
+}
+
+.foto img {
+  grid-area: 1/1;
+}
+
+.foto span {
+  background: rgba(0, 0, 0, 0.3);
+  grid-area: 1/1;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.foto span::before {
+  content: '';
+  display: inline-block;
+  background-image: url('../../Assets/visualizacao.svg');
+  width: 1.6rem;
+  height: 1rem;
+}
+
+.foto:hover span {
+  display: flex;
+}

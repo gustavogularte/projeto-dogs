@@ -62,3 +62,13 @@ export function POSTAR_FOTO(formData, token) {
     },
   };
 }
+
+export function PEGAR_FOTO({page, total, user}) {
+  return {
+    url: `${API_URL}/api/photo/?_page=${page}&_total=${total}&_user=${user}`,
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  };
+}
