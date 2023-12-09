@@ -34,22 +34,6 @@
   color: #aaa;
 }
 
-.modalDetalhes button {
-  background-color: #eee;
-  color: #aaa;
-  border: 0.1rem solid #eee;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-
-.modalDetalhes button:hover,
-.modalDetalhes button:focus {
-  border-color: #333;
-  background-color: #fff;
-}
-
 .modalDetalhes p::before {
   content: '';
   display: inline-block;

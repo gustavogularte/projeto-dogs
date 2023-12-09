@@ -83,6 +83,18 @@ export function PEGAR_FOTO(id) {
   };
 }
 
+export function DELETAR_FOTO(id, token) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  };
+}
+
 export function POSTAR_COMENTARIO(id, body, token) {
   return {
     url: `${API_URL}/api/comment/${id}`,
