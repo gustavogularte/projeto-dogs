@@ -1,6 +1,7 @@
 .foto {
   display: grid;
   cursor: pointer;
+  height: max-content;
 }
 
 .foto:nth-child(2) {
