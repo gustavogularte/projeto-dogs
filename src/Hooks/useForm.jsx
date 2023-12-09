@@ -22,7 +22,6 @@ const useForm = (type) => {
       setErro('Preencha um valor');
       return false;
     } else if (types[type] && !types[type].regex.test(value)) {
-      console.log('ativou')
       setErro(types[type].message);
       return false;
     } else {

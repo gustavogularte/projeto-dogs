@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from './FotoComentarios.module.css';
 import FotoComentarioForm from './FotoComentarioForm';
+import { UserContext } from '../../UserContext';
 
 const FotoComentarios = ({ comentarios, id }) => {
   const [comments, setComments] = React.useState(comentarios);
   const lista = React.useRef(null);
+  const { login } = React.useContext(UserContext);
+
   React.useEffect(() => {
     lista.current.scrollTop = lista.current.scrollHeight;
   }, [comments]);
@@ -21,7 +24,7 @@ const FotoComentarios = ({ comentarios, id }) => {
           </li>
         ))}
       </ul>
-      <FotoComentarioForm id={id} setComments={setComments} />
+      {login && <FotoComentarioForm id={id} setComments={setComments} />}
     </>
   );
 };

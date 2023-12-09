@@ -2,9 +2,11 @@ import React from 'react';
 import styles from './FotoConteudo.module.css';
 import { Link } from 'react-router-dom';
 import FotoComentarios from './FotoComentarios';
+import { UserContext } from '../../UserContext';
 
 const FotoConteudo = ({ data }) => {
   const { comments, photo } = data;
+  const dados = React.useContext(UserContext);
 
   return (
     <article className={styles.modal}>
@@ -14,7 +16,11 @@ const FotoConteudo = ({ data }) => {
       <section className={styles.modalConteudo}>
         <section className={styles.modalInfos}>
           <span className={styles.modalDetalhes}>
-            <Link to={`perfil/${photo.author}`}>@{photo.author}</Link>
+            {dados.data.nome === photo.author ? (
+              <button>Deletar</button>
+            ) : (
+              <Link to={`perfil/${photo.author}`}>@{photo.author}</Link>
+            )}
             <p>{photo.acessos}</p>
           </span>
           <h1 className={`${styles.modalTitulo} titulo`}>

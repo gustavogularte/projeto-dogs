@@ -13,7 +13,7 @@ const FotoComentarioForm = ({ id, setComments }) => {
     e.preventDefault();
 
     const token = window.localStorage.getItem('token');
-    if (!comment) return false
+    if (!comment) return false;
     const { url, options } = POSTAR_COMENTARIO(id, { comment }, token);
     const { response, json } = await request(url, options);
     if (response.ok) {
