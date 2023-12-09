@@ -4,7 +4,6 @@ import Input from '../Forms/Input';
 import Enviar from '../../Assets/enviar.svg?react';
 import { POSTAR_COMENTARIO } from '../../api';
 import useFetch from '../../Hooks/useFetch';
-import useForm from '../../Hooks/useForm';
 
 const FotoComentarioForm = ({ id, setComments }) => {
   const { request } = useFetch();

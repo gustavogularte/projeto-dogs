@@ -1,14 +1,17 @@
 import React from 'react';
 import styles from './FotoComentarios.module.css';
-import Input from '../Forms/Input';
 import FotoComentarioForm from './FotoComentarioForm';
 
 const FotoComentarios = ({ comentarios, id }) => {
-  const [comments, setComments] = React.useState(() => comentarios)
+  const [comments, setComments] = React.useState(comentarios);
+  const lista = React.useRef(null);
+  React.useEffect(() => {
+    lista.current.scrollTop = lista.current.scrollHeight;
+  }, [comments]);
 
   return (
     <>
-      <ul className={styles.comentariosLista}>
+      <ul className={styles.comentariosLista} ref={lista}>
         {comments.map(({ comment_author, comment_content, comment_ID }) => (
           <li className={styles.comentario} key={comment_ID}>
             <p>
@@ -18,7 +21,7 @@ const FotoComentarios = ({ comentarios, id }) => {
           </li>
         ))}
       </ul>
-      <FotoComentarioForm id={id} setComments={setComments}/>
+      <FotoComentarioForm id={id} setComments={setComments} />
     </>
   );
 };
