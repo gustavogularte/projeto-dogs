@@ -6,6 +6,16 @@
   border-radius: 0.4rem;
   max-height: 90vh;
   overflow-y: auto;
+  transform: scale(.6);
+  opacity: 0;
+  animation: scaleUp .3s forwards;
+}
+
+@keyframes scaleUp {
+  to {
+    opacity: initial;
+    transform: initial
+  }
 }
 
 .modal img {
