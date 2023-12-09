@@ -6,6 +6,7 @@
 
 .comentariosLista li {
   padding-bottom: 0.8rem;
+  word-break: break-word;
 }
 
 .comentario span {

@@ -20,15 +20,16 @@
   cursor: pointer;
 }
 
-.comentarioEnviar:hover svg *,
-.comentarioEnviar:focus svg *{
-  fill: var(--cor-p-1);
+.comentarioEnviar:hover svg path,
+.comentarioEnviar:focus svg path {
+  fill: var(--cor-p-2);
+  stroke: var(--cor-p-1);
 }
 
-.comentarioEnviar:hover svg g > *,
-.comentarioEnviar:focus svg g > *{
+.comentarioEnviar:hover svg g > path,
+.comentarioEnviar:focus svg g > path {
   opacity: 0;
-  animation: latido .5s infinite;
+  animation: latido .6s infinite;
 }
 
 @keyframes latido {

@@ -4,10 +4,12 @@ import Input from '../Forms/Input';
 import FotoComentarioForm from './FotoComentarioForm';
 
 const FotoComentarios = ({ comentarios, id }) => {
+  const [comments, setComments] = React.useState(() => comentarios)
+
   return (
     <>
       <ul className={styles.comentariosLista}>
-        {comentarios.map(({ comment_author, comment_content, comment_ID }) => (
+        {comments.map(({ comment_author, comment_content, comment_ID }) => (
           <li className={styles.comentario} key={comment_ID}>
             <p>
               <span>{comment_author}: </span>
@@ -16,7 +18,7 @@ const FotoComentarios = ({ comentarios, id }) => {
           </li>
         ))}
       </ul>
-      <FotoComentarioForm />
+      <FotoComentarioForm id={id} setComments={setComments}/>
     </>
   );
 };

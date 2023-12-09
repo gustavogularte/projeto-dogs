@@ -82,3 +82,17 @@ export function PEGAR_FOTO(id) {
     },
   };
 }
+
+export function POSTAR_COMENTARIO(id, body, token) {
+  return {
+    url: `${API_URL}/api/comment/${id}`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
