@@ -13,6 +13,20 @@
   font-weight: bold;
 }
 
+.comentariosLista::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.comentariosLista::-webkit-scrollbar-track {
+  background: var(--cor-p-2);
+}
+
+.comentariosLista::-webkit-scrollbar-thumb {
+  background-color: var(--cor-p-1);
+  border-radius: 2rem;
+  border: 0.1rem solid var(--cor-p-2);
+}
+
 @media (max-width: 950px) {
   .comentariosLista {
     max-height: 20rem;
