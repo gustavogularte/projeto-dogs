@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './FotoComentarioForm.module.css';
 import Input from '../Forms/Input';
+import Enviar from '../../Assets/enviar.svg?react'
 
 const FotoComentarioForm = () => {
   function enviarComentario(e) {
@@ -13,7 +14,7 @@ const FotoComentarioForm = () => {
       <button
         aria-label="Enviar comentário"
         className={styles.comentarioEnviar}
-      ></button>
+      ><Enviar/></button>
     </form>
   );
 };

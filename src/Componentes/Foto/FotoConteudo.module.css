@@ -50,4 +50,8 @@
     grid-template-columns: 1fr;
     max-width: 60rem;
   }
+
+  .modal img {
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
 }
