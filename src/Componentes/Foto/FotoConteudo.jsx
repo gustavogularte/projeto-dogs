@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import FotoComentarios from './FotoComentarios';
 import { UserContext } from '../../UserContext';
 import FotoDeletar from './FotoDeletar';
+import Imagem from '../Helper/Imagem';
 
 const FotoConteudo = ({ data }) => {
   const { comments, photo } = data;
@@ -11,9 +12,7 @@ const FotoConteudo = ({ data }) => {
 
   return (
     <article className={styles.modal}>
-      <section className={styles.modalFoto}>
-        <img src={photo.src} alt={photo.title} />
-      </section>
+      <Imagem src={photo.src} alt={photo.title}/>
       <section className={styles.modalConteudo}>
         <section className={styles.modalInfos}>
           <span className={styles.modalDetalhes}>

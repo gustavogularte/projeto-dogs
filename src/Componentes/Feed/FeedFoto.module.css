@@ -9,7 +9,7 @@
   grid-row: span 2;
 }
 
-.foto img {
+.foto div {
   grid-area: 1/1;
 }
 
