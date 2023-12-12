@@ -5,7 +5,7 @@ import FeedFoto from './FeedFoto';
 import styles from './FeedFotos.module.css';
 import Loading from '../Helper/Loading';
 
-const FeedFotos = ({setModalFoto}) => {
+const FeedFotos = ({ setModalFoto }) => {
   const { data, loading, erro, request } = useFetch();
 
   React.useEffect(() => {

@@ -1,0 +1,17 @@
+.loading {
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.loading div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  background-color: #eee;
+  padding: 1.2rem;
+  padding-left: 2rem;
+  border-radius: 50%;
+}

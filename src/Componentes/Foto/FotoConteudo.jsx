@@ -9,6 +9,7 @@ import Imagem from '../Helper/Imagem';
 const FotoConteudo = ({ data }) => {
   const { comments, photo } = data;
   const dados = React.useContext(UserContext);
+  console.log(dados)
 
   return (
     <article className={styles.modal}>
@@ -16,11 +17,12 @@ const FotoConteudo = ({ data }) => {
       <section className={styles.modalConteudo}>
         <section className={styles.modalInfos}>
           <span className={styles.modalDetalhes}>
-            {dados.data.nome === photo.author ? (
+            {dados.data ? dados.data.nome === photo.author ? (
               <FotoDeletar id={photo.id} />
             ) : (
               <Link to={`perfil/${photo.author}`}>@{photo.author}</Link>
-            )}
+            ) : <Link to={`perfil/${photo.author}`}>@{photo.author}</Link>}
+            {}
             <p>{photo.acessos}</p>
           </span>
           <h1 className={`${styles.modalTitulo} titulo`}>
