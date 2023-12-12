@@ -1,0 +1,16 @@
+.foto {
+  padding-top: 6rem;
+}
+
+.foto article {
+  grid-template-columns: 1fr;
+  max-height: initial;
+}
+
+.foto article section {
+  padding: 1rem 0 2rem 0;
+}
+
+.foto a {
+  pointer-events: none;
+}
