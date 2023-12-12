@@ -18,7 +18,7 @@ const Feed = ({ user }) => {
           wait = true;
           setTimeout(() => {
             wait = false;
-          }, 500);
+          }, 1000);
         }
       }
     }
@@ -43,6 +43,7 @@ const Feed = ({ user }) => {
           setInfinito={setInfinito}
         />
       ))}
+      {!infinito && <p style={{color: '#aaa', fontSize: '1.6rem', textAlign: 'center', paddingBottom: '4rem'}}>Não existem mais postagens.</p>}
     </article>
   );
 };
