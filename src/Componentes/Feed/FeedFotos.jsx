@@ -11,7 +11,7 @@ const FeedFotos = ({ setModalFoto, user }) => {
   React.useEffect(() => {
     const { url, options } = PEGAR_FOTOS({ page: 1, total: 6, user });
     request(url, options);
-  }, [request]);
+  }, [request, user]);
 
   if (erro) return <section>{erro}</section>;
   if (loading) return <Loading />;
