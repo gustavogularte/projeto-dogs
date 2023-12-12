@@ -6,7 +6,7 @@ const Feed = () => {
   const [modalFoto, setModalFoto] = React.useState(null);
 
   return (
-    <article className='container'>
+    <article className='container grid'>
       {modalFoto && <FeedModal foto={modalFoto} setModalFoto={setModalFoto}/>}
       <FeedFotos setModalFoto={setModalFoto}/>
     </article>
