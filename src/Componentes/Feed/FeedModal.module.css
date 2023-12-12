@@ -11,3 +11,7 @@
   align-items: center;
   padding: 0 2rem;
 }
+
+.modalContainer article {
+  padding-bottom: 0;
+}
