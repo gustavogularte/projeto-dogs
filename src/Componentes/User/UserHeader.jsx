@@ -10,7 +10,7 @@ import useMedia from '../../Hooks/useMedia';
 
 const UserHeader = () => {
   const { logoutUser } = React.useContext(UserContext);
-  const [titulo, setTitulo] = React.useState('');
+  const [titulo, setTitulo] = React.useState('Minha conta');
   const location = useLocation().pathname;
   const navigate = useNavigate();
   const mobile = useMedia('(max-width: 600px)');

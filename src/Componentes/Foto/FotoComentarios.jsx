@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './FotoComentarios.module.css';
 import FotoComentarioForm from './FotoComentarioForm';
 import { UserContext } from '../../UserContext';
+import { Link } from 'react-router-dom';
 
 const FotoComentarios = ({ comentarios, id }) => {
   const [comments, setComments] = React.useState(comentarios);
@@ -18,7 +19,7 @@ const FotoComentarios = ({ comentarios, id }) => {
         {comments.map(({ comment_author, comment_content, comment_ID }) => (
           <li className={styles.comentario} key={comment_ID}>
             <p>
-              <span>{comment_author}: </span>
+              <Link to={`/perfil/${comment_author}`}>{comment_author}: </Link>
               {comment_content}
             </p>
           </li>

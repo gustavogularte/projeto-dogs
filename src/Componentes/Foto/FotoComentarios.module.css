@@ -9,8 +9,14 @@
   word-break: break-word;
 }
 
-.comentario span {
+.comentario a {
+  display: inline;
   font-weight: bold;
+}
+
+.comentario a:hover {
+  color: var(--cor-p-1);
+  transition: 0.2s;
 }
 
 .comentariosLista::-webkit-scrollbar {
