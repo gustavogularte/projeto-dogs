@@ -13,6 +13,7 @@ const FeedFotos = ({ setModalFoto, user, page, setInfinito }) => {
       let total = 6;
       const { url, options } = PEGAR_FOTOS({ page, total, user });
       const { response, json } = await request(url, options);
+      console.log(json,length)
       if (response && response.ok && json.length < total) {
         setInfinito(false);
       }

@@ -8,14 +8,14 @@ const Feed = ({ user }) => {
   const [infinito, setInfinito] = React.useState(true);
 
   React.useEffect(() => {
+    let wait = false;
     function scrollInfinito() {
       if (infinito) {
         const scroll = window.scrollY;
         const height = document.body.offsetHeight - window.innerHeight;
-        let wait = false;
         if (scroll > height * 0.75 && !wait) {
           setPages((page) => [...page, page.length + 1]);
-          wait = false;
+          wait = true;
           setTimeout(() => {
             wait = false;
           }, 500);
