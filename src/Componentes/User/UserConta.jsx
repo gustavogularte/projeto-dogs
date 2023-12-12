@@ -5,7 +5,6 @@ import { UserContext } from '../../UserContext';
 
 const UserConta = () => {
   const { data } = React.useContext(UserContext);
-  console.log(data);
 
   return (
     <section className={styles.conta + ' animeLeft'}>

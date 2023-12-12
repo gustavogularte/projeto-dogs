@@ -5,13 +5,20 @@ import FeedFoto from './FeedFoto';
 import styles from './FeedFotos.module.css';
 import Loading from '../Helper/Loading';
 
-const FeedFotos = ({ setModalFoto, user }) => {
+const FeedFotos = ({ setModalFoto, user, page, setInfinito }) => {
   const { data, loading, erro, request } = useFetch();
 
   React.useEffect(() => {
-    const { url, options } = PEGAR_FOTOS({ page: 1, total: 6, user });
-    request(url, options);
-  }, [request, user]);
+    async function fetchFotos() {
+      let total = 6;
+      const { url, options } = PEGAR_FOTOS({ page, total, user });
+      const { response, json } = await request(url, options);
+      if (response && response.ok && json.length < total) {
+        setInfinito(false);
+      }
+    }
+    fetchFotos();
+  }, [request, user, page, setInfinito]);
 
   if (erro) return <section>{erro}</section>;
   if (loading) return <Loading />;

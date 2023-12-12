@@ -9,7 +9,6 @@ import Imagem from '../Helper/Imagem';
 const FotoConteudo = ({ data }) => {
   const { comments, photo } = data;
   const dados = React.useContext(UserContext);
-  console.log(dados)
 
   return (
     <article className={styles.modal}>
