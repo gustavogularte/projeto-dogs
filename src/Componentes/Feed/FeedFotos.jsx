@@ -5,11 +5,11 @@ import FeedFoto from './FeedFoto';
 import styles from './FeedFotos.module.css';
 import Loading from '../Helper/Loading';
 
-const FeedFotos = ({ setModalFoto }) => {
+const FeedFotos = ({ setModalFoto, user }) => {
   const { data, loading, erro, request } = useFetch();
 
   React.useEffect(() => {
-    const { url, options } = PEGAR_FOTOS({ page: 1, total: 6, user: 0 });
+    const { url, options } = PEGAR_FOTOS({ page: 1, total: 6, user });
     request(url, options);
   }, [request]);
 
