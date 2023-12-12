@@ -14,7 +14,6 @@ const Feed = ({ user }) => {
         const height = document.body.offsetHeight - window.innerHeight;
         let wait = false;
         if (scroll > height * 0.75 && !wait) {
-          console.log('carregar');
           setPages((page) => [...page, page.length + 1]);
           wait = false;
           setTimeout(() => {

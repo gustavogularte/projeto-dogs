@@ -19,13 +19,13 @@ const FotoConteudo = ({ data }) => {
             {dados.data ? dados.data.nome === photo.author ? (
               <FotoDeletar id={photo.id} />
             ) : (
-              <Link to={`perfil/${photo.author}`}>@{photo.author}</Link>
-            ) : <Link to={`perfil/${photo.author}`}>@{photo.author}</Link>}
+              <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+            ) : <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>}
             {}
             <p>{photo.acessos}</p>
           </span>
           <h1 className={`${styles.modalTitulo} titulo`}>
-            <Link to={`foto/${photo.id}`}>{photo.title}</Link>
+            <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
           </h1>
           <ul className={styles.modalCaracteristicas}>
             <li>{photo.peso} kg</li>
