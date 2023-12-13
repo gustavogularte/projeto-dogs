@@ -14,7 +14,7 @@ const Feed = ({ user }) => {
         const scroll = window.scrollY;
         const height = document.body.offsetHeight - window.innerHeight;
         if (scroll > height * 0.75 && !wait) {
-          setPages((page) => [...page, page.length + 1]);
+          setPages((pages) => [...pages, pages.length + 1]);
           wait = true;
           setTimeout(() => {
             wait = false;
@@ -43,7 +43,18 @@ const Feed = ({ user }) => {
           setInfinito={setInfinito}
         />
       ))}
-      {!infinito && <p style={{color: '#aaa', fontSize: '1.6rem', textAlign: 'center', paddingBottom: '4rem'}}>Não existem mais postagens.</p>}
+      {!infinito && (
+        <p
+          style={{
+            color: '#aaa',
+            fontSize: '1.6rem',
+            textAlign: 'center',
+            paddingBottom: '4rem',
+          }}
+        >
+          Não existem mais postagens.
+        </p>
+      )}
     </article>
   );
 };
