@@ -19,12 +19,18 @@ As principais tecnologias usadas nesse projeto:
 ## 📖 **Descrição do Projeto**
 
 Uma rede social para cachorros onde você pode:
+<br />
 -criar uma conta
+<br />
 -fazer login
+<br />
 -recuperar e resetar sua senha
+<br />
 -postar foto do seu pet com nome, idade e peso para todos verem
 -fazer comentários em outros posts
+<br />
 -ver as estatísticas dos seus posts
+<br />
 
 O backend atualmente está sendo usado com a api disponibilizada pelo próprio curso, mas futuramente irei criar a minha própria!
 
@@ -36,6 +42,6 @@ O backend atualmente está sendo usado com a api disponibilizada pelo próprio c
 ## 🔗 **Links**
 
 - Aqui está o site original - https://dogs.origamid.dev
-
+<br />
 - Meu Twitter - https://twitter.com/gustavoGulArend
 - Meu perfil no Front End Mentor com mais desafios - https://www.frontendmentor.io/profile/gustavogularte
