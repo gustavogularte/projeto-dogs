@@ -35,7 +35,7 @@ Uma rede social para cachorros onde você pode:
 
 O backend atualmente está sendo usado com a api disponibilizada pelo próprio curso, mas futuramente irei criar a minha própria!
 
-## 📖 **Como usar**
+## ? **Como usar**
 1. Clonar o repositório: **`git clone https://github.com/Alecell/octopost.git`**
 2. Instalar as dependências: **`npm install`**
 3. Iniciar o aplicativo: **`npm run dev`**
