@@ -6,6 +6,7 @@ import useForm from '../../Hooks/useForm';
 import { UserContext } from '../../UserContext';
 import styles from './Login.module.css';
 import Erro from '../Forms/Erro';
+import Head from '../Head';
 
 const LoginEntrar = () => {
   const username = useForm();
@@ -22,6 +23,7 @@ const LoginEntrar = () => {
 
   return (
     <section className='animeLeft'>
+      <Head title='Login' description='Faça seu login na rede social Dogs'/>
       <form onSubmit={handleSubmit}>
         <h1 className="titulo">Login</h1>
         <Input type="text" label="Usuário" {...username} />

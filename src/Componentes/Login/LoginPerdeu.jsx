@@ -4,6 +4,7 @@ import Button from '../Forms/Button';
 import useForm from '../../Hooks/useForm';
 import { PERDEU_SENHA } from '../../api';
 import useFetch from '../../Hooks/useFetch';
+import Head from '../Head';
 
 const LoginPerdeu = () => {
   const login = useForm();
@@ -20,8 +21,8 @@ const LoginPerdeu = () => {
 
   return (
     <section className="animeLeft">
+      <Head title='Perdeu a senha' description='Recupere sua senha perdida'/>
       <h1 className="titulo">Perdeu a senha?</h1>
-
       {data ? (
         <p style={{ color: '#44cc11' }}>{data}</p>
       ) : (

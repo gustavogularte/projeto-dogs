@@ -7,6 +7,7 @@ import Erro from '../Forms/Erro';
 import styles from './UserPostar.module.css';
 import { POSTAR_FOTO } from '../../api';
 import { useNavigate } from 'react-router-dom';
+import Head from '../Head';
 
 const UserPostar = () => {
   const nome = useForm();
@@ -42,6 +43,7 @@ const UserPostar = () => {
 
   return (
     <section className={styles.postar + ' animeLeft'}>
+      <Head title='Postar foto' description='Faça uma publicação na rede social Dogs'/>
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" {...nome} />
         <Input label="Peso" type="text" {...peso} />

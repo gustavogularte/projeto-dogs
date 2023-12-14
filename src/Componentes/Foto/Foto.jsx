@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import Erro from '../Forms/Erro';
 import Loading from '../Helper/Loading';
 import styles from './Foto.module.css';
+import Head from '../Head';
 
 const Foto = () => {
   const { data, loading, erro, request } = useFetch();
@@ -19,6 +20,7 @@ const Foto = () => {
 
   return (
     <main className={`${styles.foto} container grid`}>
+      <Head title='Foto' description='Publicação Dogs'/>
       {erro && <Erro erro={erro} />}
       {loading && <Loading />}
       {data && <FotoConteudo data={data} />}

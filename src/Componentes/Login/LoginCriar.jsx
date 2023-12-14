@@ -6,6 +6,7 @@ import { CRIAR_USER } from '../../api';
 import useFetch from '../../Hooks/useFetch';
 import { UserContext } from '../../UserContext';
 import Erro from '../Forms/Erro';
+import Head from '../Head';
 
 const LoginCriar = () => {
   const username = useForm();
@@ -28,6 +29,7 @@ const LoginCriar = () => {
 
   return (
     <section className="animeLeft">
+      <Head title='Criar conta' description='Crie sua conta na rede social Dogs'/>
       <form onSubmit={handleSubmit}>
         <h1 className="titulo">Cadastre-se</h1>
         <Input label="Usuário" type="text" {...username} />
