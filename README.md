@@ -42,7 +42,6 @@ O backend atualmente está sendo usado com a api disponibilizada pelo próprio c
 ## 🔗 **Links**
 
 - Aqui está o site original - https://dogs.origamid.dev
-<br />
 - Meu Twitter - https://twitter.com/gustavoGulArend
 <br />
 - Meu perfil no Front End Mentor com mais desafios - https://www.frontendmentor.io/profile/gustavogularte
