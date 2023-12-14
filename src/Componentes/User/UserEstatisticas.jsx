@@ -2,7 +2,7 @@ import React from 'react';
 import Head from '../Head';
 import useFetch from '../../Hooks/useFetch';
 import { ESTATISTICAS } from '../../api';
-import UserEstatisticasGraficos from './UserEstatisticasGraficos';
+const UserEstatisticasGraficos = React.lazy(() => import('./UserEstatisticasGraficos'))
 
 const UserEstatisticas = () => {
   const { data, loading, erro, request } = useFetch();
@@ -17,10 +17,10 @@ const UserEstatisticas = () => {
   }, [request]);
 
   return (
-    <>
+    <React.Suspense fallback={<div></div>}>
       <Head title="Estatísticas" description="Estatísticas do perfil" />
       {data && <UserEstatisticasGraficos data={data} />}
-    </>
+    </React.Suspense>
   );
 };
 
