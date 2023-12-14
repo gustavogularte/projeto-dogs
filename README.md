@@ -27,6 +27,7 @@ Uma rede social para cachorros onde você pode:
 -recuperar e resetar sua senha
 <br />
 -postar foto do seu pet com nome, idade e peso para todos verem
+<br />
 -fazer comentários em outros posts
 <br />
 -ver as estatísticas dos seus posts
