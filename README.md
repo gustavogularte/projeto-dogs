@@ -42,6 +42,7 @@ O backend atualmente está sendo usado com a api disponibilizada pelo próprio c
 
 ## 🔗 **Links**
 
+- Site - https://dogsgustavo.netlify.app/
 - Aqui está o site original - https://dogs.origamid.dev
 - Meu Twitter - https://twitter.com/gustavoGulArend
 - Meu perfil no Front End Mentor com mais desafios - https://www.frontendmentor.io/profile/gustavogularte
