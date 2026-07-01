@@ -14,7 +14,6 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black">
   <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white">
-  <img src="https://img.shields.io/badge/Victory-6E40C9?style=for-the-badge">
   <img src="https://img.shields.io/badge/WordPress_API-21759B?style=for-the-badge&logo=wordpress&logoColor=white">
   <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge">
   <img src="https://img.shields.io/badge/Curso-Origamid-purple?style=for-the-badge">
